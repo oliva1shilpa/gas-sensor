@@ -1,4 +1,5 @@
 #include <SoftwareSerial.h>
+#include "Timer.h"
 SoftwareSerial mySerial(12, 13); // RX, TX
 
 #include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
@@ -29,6 +30,7 @@ WiFiClient client;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 void configModeCallback (WiFiManager *myWiFiManager) 
 {
+  Serial.println("Gas sensor project");
   Serial.println("Entered config mode");             //*-*-*-*-*-*-*-*-*-*-*-*-*-*if control enters this function then net is not connected
   Serial.println(WiFi.softAPIP());                  // "WiFi.softAPIP() is for AP" , "WiFi.localIP() is for STA",
                                                                 
