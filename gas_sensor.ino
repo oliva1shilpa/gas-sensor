@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-#include "Timer.h"
+//#include "Timer.h"
 SoftwareSerial mySerial(12, 13); // RX, TX
 
 #include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
@@ -21,7 +21,7 @@ const char* post_url = "/devices/deviceData";       // OR /api/v2/thingscloud2/_
 const char* time_server = "www.convert-unix-time.com";             //this is to convert timestamp
 const int httpPort = 80;
 
-char timestamp[10];
+char timestamp[20];
 
 WiFiClient client;
   
